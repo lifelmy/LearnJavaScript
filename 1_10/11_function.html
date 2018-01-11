@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function test(first, second) {
+				return first + second;
+			}
+
+			function myFunction(first, second) {
+				var a = test(first, second);
+				document.getElementById("demo").innerHTML = a;
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<p id="demo"></p>
+		<button onclick="myFunction('hello','world')">click me</button>
+		
+		
+	</body>
+
+</html>

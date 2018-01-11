@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p id="demo2"></p>
+		<p id="demo3"></p>
+		<p id="demo4"></p>
+		<script>
+			
+			var length=6;
+			document.getElementById("demo").innerHTML=length;
+			document.getElementById("demo2").innerHTML=(5+6)*10;
+			
+			var cars=["奔驰","宝马","特斯拉"];
+			
+			var person={firstName:"Jon",lastName:"Snow"};
+			
+			//document.getElementById("demo3").innerHTML=person.lastName;
+			document.getElementById("demo3").innerHTML=cars[0];
+			
+			document.getElementById("demo4").innerHTML="hello"+16;
+			
+			//var hello='123';
+			//window.alert(hello);
+			
+			//如果重新声明 JavaScript 变量，该变量的值不会丢失：
+			var age=10;
+			var age;
+			window.alert(age)
+		</script>
+	</body>
+</html>

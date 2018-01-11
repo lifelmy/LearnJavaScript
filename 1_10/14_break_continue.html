@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//break 的作用是跳出代码块, 所以 break 可以使用与循环和 switch 等
+			//continue 的作用是进入下一个迭代, 所以 continue 只能用于循环的代码块。
+
+			var nums = [1, 2, 3, 4, 5];
+
+			//可以对 JavaScript 语句进行标记。
+			hello: {
+				document.write(nums[0] + "<br />");
+				document.write(nums[1] + "<br />");
+				document.write(nums[2] + "<br />");
+				//此处不是循环，不能使用continue
+				//continue hello;
+				break hello;
+				document.write(nums[3] + "<br />");
+				document.write(nums[4] + "<br />");
+			}
+
+			outerloop:
+				for(var i = 0; i < 10; i++) {
+					innerloop: for(var j = 0; j < 10; j++) {
+						if(j > 3) {
+							break;
+						}
+						if(i == 2) {
+							break innerloop;
+						}
+						if(i == 4) {
+							break outerloop;
+						}
+						document.write("i=" + i + " j=" + j + "<br />");
+					}
+				}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

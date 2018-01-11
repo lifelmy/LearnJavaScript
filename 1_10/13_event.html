@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function changeColor(ele,clo){
+				ele.style.color=clo;
+			}
+			
+		var x;
+		var nums = [1, 3, 5];
+		
+		//for of直接输出数组的值
+		for (x of nums)
+		{
+		    document.write(x+ "<br />");
+		}
+		
+		//for in 输出数组的编号
+		for (x in nums)
+		{
+			document.write(x+"<br />")
+		}
+		
+		
+		document.write("xxxxxxxxxxxxxxxxxxx"+"<br />");
+		var a = 1 && 3;
+		document.write(a+"<br />");
+		
+		var b = null && 1+2 ;
+		document.write(b+"<br />");
+		</script>
+	</head>
+	<body>
+		<button onclick="this.innerHTML=Date()">自身会变化</button>
+		<button onclick="document.getElementById('demo').innerHTML=Date()">点一下试试</button>
+		<p id="demo"></p>
+		
+		<p onmouseover="changeColor(this,'red')"  onmouseleave="changeColor(this,'green')">这是一段文字，离开或者放上去都会有变化</p>
+		
+		
+	
+	</body>
+</html>

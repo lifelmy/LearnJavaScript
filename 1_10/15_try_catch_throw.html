@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function myFunction(){
+				var num=document.getElementById("number").value;
+				try{
+					if (num=="") throw "值为空";
+					if (isNaN(num)) throw "不是数字";
+					var x=Number(num);
+					if(x<10) throw "太小";
+					if(x>30) throw "太大";
+				}catch(err){
+					document.getElementById("error").innerHTML=err;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		请输入一个数字：
+		<input id="number" /><button onclick="myFunction()">测试输入</button>
+		<p id="error"></p>
+	</body>
+</html>
